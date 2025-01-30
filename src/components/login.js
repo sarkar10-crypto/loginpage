@@ -81,6 +81,7 @@
 
 import React, { useState, useEffect } from "react";
 import "./login.css";
+import Signup from "./signup";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -144,7 +145,12 @@ const Login = () => {
         <button onClick={handleClick} type="submit" className="login-btn">
           Login
         </button>
-        <button type="button" className="signup-btn" onClick={() => alert("Redirecting to Signup Page...")}> 
+        <button type="button" className="signup-btn" onClick={() => {
+          alert("Redirecting to Signup Page...",); 
+          <Signup/>
+        }
+          
+        }> 
           Sign Up
         </button>
       </form>
